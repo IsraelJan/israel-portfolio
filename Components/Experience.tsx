@@ -1,71 +1,142 @@
 const experiences = [
   {
-    period: "Aug 2025 – Present",
-    role: "Web Designer & Workflow Automation / CRM Admin",
-    company: "Real Tasking",
-    logo: "/companies/real-tasking.png",
-    type: "Remote · Texas, USA",
+    period: "Jan 2026 – Present",
+    role: "Frontend Developer | CRM & Operations Support",
+    company: "The Marisel Group",
+    logo: "/companies/marisel-group.jpg",
+    type: "Remote",
+    location: "New York, USA",
     description:
-      "Designed and improved responsive business websites and user-facing digital experiences while supporting CRM administration, workflow automation, and system integrations.",
+      "Build and improve responsive web experiences while connecting websites with CRM systems, automation workflows, forms, bookings, and other business tools.",
     skills: [
-      "Web Development",
+      "JavaScript",
+      "Frontend Development",
       "Responsive Design",
       "UI/UX",
       "CRM",
-      "Automation",
+      "GoHighLevel",
+      "Zapier",
       "System Integration",
     ],
   },
+
   {
-    period: "May 2025 – Present",
-    role: "Virtual Property Management Assistant | CRM & Automation Specialist",
-    company: "Marisel Hub",
-    logo: "/companies/marisel-hub.png",
-    type: "Remote · Sydney, Australia",
+    period: "Aug 2025 – Aug 2026",
+    role: "Frontend Developer | Web Systems & CRM Automation",
+    company: "Real Tasking",
+    logo: "/companies/real-tasking.jpg",
+    type: "Contract · Remote",
+    location: "Texas, USA",
     description:
-      "Supported property management operations through CRM workflows, automation, digital systems, and process optimization.",
+      "Build and maintain responsive websites while supporting CRM administration, lead workflows, business integrations, and automated client communication.",
     skills: [
-      "Web Systems",
+      "Frontend Development",
+      "JavaScript",
+      "Responsive Design",
+      "UI/UX",
+      "GoHighLevel",
+      "Zapier",
       "CRM",
-      "Automation",
-      "API Integration",
-      "Workflow Design",
+      "System Integration",
     ],
   },
+
+  {
+    period: "May 2025 – Jan 2026",
+    role: "Property Operations & CRM Automation Specialist",
+    company: "Venus Property AU",
+    logo: "/companies/venus-property.jpg",
+    type: "Remote",
+    location: "Sydney, Australia",
+    description:
+      "Managed property operations while building and supporting CRM workflows, automated processes, websites, bookings, and digital systems used across property management operations.",
+    skills: [
+      "CRM",
+      "GoHighLevel",
+      "HoneyBook",
+      "Zapier",
+      "Workflow Automation",
+      "Web Systems",
+      "Property Operations",
+    ],
+  },
+
   {
     period: "Jun 2025 – Oct 2025",
     role: "Web Designer & Digital Systems Specialist",
     company: "The 5 Star Host",
-    logo: "/companies/five-star-host.png",
-    type: "Freelance · Miami, USA",
+    logo: "/companies/five-star-host.jpg",
+    type: "Freelance · Remote",
+    location: "Miami, USA",
     description:
-      "Designed and maintained responsive web pages and digital experiences with a focus on usability, mobile responsiveness, booking flows, and website integrations.",
+      "Designed and maintained responsive websites while supporting booking systems, lead capture, CRM integrations, and automated client communication for real estate operations.",
     skills: [
-      "Wix",
       "Web Design",
       "Responsive Design",
       "UI/UX",
+      "Wix",
       "Booking Systems",
+      "CRM",
+      "Automation",
     ],
   },
+
   {
     period: "Apr 2023 – Oct 2025",
-    role: "Virtual Operations Assistant | Digital Systems Support",
-    company: "Remote Operations",
-    logo: "/companies/remote-operations.png",
-    type: "Remote · Australia",
+    role: "Digital Operations & CRM Support Specialist",
+    company: "ZARIQ",
+    logo: "/companies/zariq.jpg",
+    type: "Remote",
+    location: "New South Wales, Australia",
     description:
-      "Supported remote business operations while working with websites, CRM platforms, digital tools, and technical workflows.",
+      "Supported digital operations for real estate and service-based clients through CRM management, lead generation, research, scheduling, property listings, and digital content.",
     skills: [
-      "Digital Systems",
-      "Technical Support",
       "CRM",
-      "Troubleshooting",
+      "Digital Operations",
+      "Lead Generation",
+      "Research",
+      "Client Communication",
+      "Property Listings",
+    ],
+  },
+
+  {
+    period: "Oct 2021 – Mar 2025",
+    role: "Live Ops Agent",
+    company: "CCI Global",
+    logo: "/companies/cci-global.jpg",
+    type: "Full-time",
+    location: "Kenya",
+    description:
+      "Supported high-volume daily operations through workflow monitoring, customer service, database management, order processing, and CRM-based case handling.",
+    skills: [
       "Operations",
+      "Customer Service",
+      "CRM",
+      "Zendesk",
+      "Salesforce",
+      "Problem Solving",
+    ],
+  },
+
+  {
+    period: "Jan 2021 – Sep 2021",
+    role: "Customer Service / Culture Ambassador",
+    company: "KFC",
+    logo: "/companies/kfc.png",
+    type: "Part-time · On-site",
+    location: "Kenya",
+    description:
+      "Supported customer service and daily operations while helping onboard team members, improve communication, and maintain service standards in a fast-paced environment.",
+    skills: [
+      "Customer Service",
+      "Operations",
+      "Teamwork",
+      "Communication",
+      "Problem Solving",
     ],
   },
 ];
-
 export default function Experience() {
   return (
     <section id="experience" className="experience-section">
@@ -75,9 +146,9 @@ export default function Experience() {
         <h2>Professional Experience</h2>
 
         <p>
-          Real-world experience building websites, managing digital systems,
-          automating workflows, and supporting business operations across
-          international remote teams.
+          Building from operations and digital systems into frontend
+          development, combining technical skills with real-world business
+          experience.
         </p>
       </div>
 
@@ -85,7 +156,7 @@ export default function Experience() {
         {experiences.map((experience) => (
           <article
             className="experience-card"
-            key={experience.company + experience.period}
+            key={`${experience.company}-${experience.period}`}
           >
             <div className="experience-period">
               {experience.period}
@@ -108,7 +179,7 @@ export default function Experience() {
                 </div>
 
                 <span className="experience-type">
-                  {experience.type}
+                  {experience.type} · {experience.location}
                 </span>
               </div>
 

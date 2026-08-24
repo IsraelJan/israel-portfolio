@@ -3,6 +3,25 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="hero" id="home">
+      {/* =========================
+    BACKGROUND IMAGE
+========================== */}
+<div className="hero-image-bg">
+  <Image
+    src="/images/hero-workspace.jpg"
+    alt=""
+    fill
+    priority
+    className="hero-background-image"
+    sizes="100vw"
+  />
+</div>
+
+<div className="hero-image-overlay" />
+
+      {/* Background overlay for readability */}
+      <div className="hero-video-overlay" />
+
       <div className="hero-content">
         {/* =========================
             LEFT: HERO CONTENT
@@ -51,7 +70,7 @@ export default function Hero() {
             RIGHT: PROFILE VISUAL
         ========================== */}
         <div className="hero-image-area">
-          {/* Laptop / workspace background */}
+          {/* Existing laptop / workspace visual */}
           <div className="hero-workspace-bg">
             <div className="workspace-screen">
               <div className="screen-top">
@@ -112,12 +131,15 @@ export default function Hero() {
             </code>
           </div>
 
-          {/* Available for work - bottom */}
+          {/* Available for work */}
           <div className="hero-available-card">
             <span className="availability-dot" />
 
             <div>
-              <span className="availability-label">Available for Work</span>
+              <span className="availability-label">
+                Available for Work
+              </span>
+
               <p>Open to remote opportunities worldwide</p>
             </div>
           </div>
