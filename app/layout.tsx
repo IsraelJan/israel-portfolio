@@ -1,8 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Israel Jan Otieno | Software Engineer",
-  description: "Software Engineer and Frontend Developer Portfolio",
+  title: "Israel Jan | Systems, Technology & Operations",
+  description:
+    "Israel Jan — Software Engineering, Digital Systems, Automation and Operations.",
 };
 
 export default function RootLayout({
